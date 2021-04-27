@@ -10,4 +10,9 @@ jobs:
       - name: Run script
         uses: matlab-actions/run-command@v0
         with:
-          command: version   
+          command: version          
+      - name: Run Tests
+        uses: matlab-actions/run-tests@newoptions-bash
+        with:
+          source-folder: src/folderA
+          select-by-tag: TestSquare
