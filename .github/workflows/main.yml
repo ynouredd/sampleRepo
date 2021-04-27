@@ -1,4 +1,4 @@
-name: Run MATLAB Script on GitHub-Hosted Runner
+name: Run MATLAB Script on Self-Hosted Runner
 on: [push]
 jobs:
   my-job:
