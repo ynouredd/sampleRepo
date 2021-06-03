@@ -8,7 +8,5 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v2
       - name: Run script
-        uses: matlab-actions/run-command@v0
-        with:
-          command: version          
+        uses: matlab-actions/run-command@v0        
       
