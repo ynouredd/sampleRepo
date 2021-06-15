@@ -29,7 +29,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: code-coverage-artifact
-          path: test-results/model-coverage.xml
+          path: test-results/pdf-results.pdf
           
       - name: upload to codecov 
         uses: codecov/codecov-action@v1 
