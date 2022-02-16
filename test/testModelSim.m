@@ -6,7 +6,7 @@ classdef testModelSim < matlab.unittest.TestCase
         function testSquare(testCase)
             %TESTCALC Construct an instance of this class
             %   Detailed explanation goes here
-            tf = sltest.testmanager.TestFile('cruiseControlRBTCovTests.mldatx');
+            tf = sltest.testmanager.TestFile('test.mldatx');
             ts = tf.getTestSuites;
             tc = ts.getTestCases;
             tc.setProperty('model', 'sampleModel.slx');
