@@ -1,6 +1,5 @@
-
-on:
-  push
+name: Test 22a
+on: push
 
 jobs:
   matlab-job-22a:
