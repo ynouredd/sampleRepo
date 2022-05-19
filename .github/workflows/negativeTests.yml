@@ -3,7 +3,7 @@ on: [push]
 jobs:
   my-job:
     name: Tests22a
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     steps:
       #set up
       - name: Check out repository
