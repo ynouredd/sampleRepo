@@ -1,6 +1,6 @@
 
 on:
-  workflow_dispatch
+  push
 
 jobs:
   matlab-job-22a:
