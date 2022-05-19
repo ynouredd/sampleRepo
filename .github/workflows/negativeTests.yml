@@ -16,7 +16,7 @@ jobs:
       - name: Run script
         uses: matlab-actions/run-command@v1
         with:
-          command: getenv EDITOR, editing
+          command: edit add
 #         continue-on-error: true
       #positive test case
 #       - name: Run script
