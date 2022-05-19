@@ -3,23 +3,15 @@ on: [push]
 jobs:
   my-job:
     name: Tests22a
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
-      #set up
       - name: Check out repository
         uses: actions/checkout@v2
       - name: Install MATLAB
         uses: matlab-actions/setup-matlab@v1
         with:
             release: R2022a
-      # negative test case
       - name: Run script
         uses: matlab-actions/run-command@v1
         with:
           command: edit add
-#         continue-on-error: true
-      #positive test case
-#       - name: Run script
-#         uses: matlab-actions/run-command@v0
-#         with:
-#           command: editing
