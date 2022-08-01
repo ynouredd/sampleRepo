@@ -1,5 +1,5 @@
 name: Tests 22a
-on: [push]
+on: [workflow_dispatch]
 jobs:
   my-job:
     name: Tests22a
