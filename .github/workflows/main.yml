@@ -22,7 +22,6 @@ jobs:
           code-coverage-cobertura: code-coverage/coverage.xml
           test-results-pdf: test-results/results.pdf
           test-results-simulink-test: test-results/results.mldatx
-          model-coverage-cobertura: model-coverage/coverage.xml
           
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
@@ -30,4 +29,3 @@ jobs:
           path: |
             test-results/
             code-coverage/
-            model-coverage/
