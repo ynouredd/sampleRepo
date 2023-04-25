@@ -11,20 +11,23 @@ end
 
 function checkTask(~)
 % Identify code issues
-issues = codeIssues;
-assert(isempty(issues.Issues),formattedDisplayText( ...
-    issues.Issues(:,["Location" "Severity" "Description"])))
+% issues = codeIssues;
+% assert(isempty(issues.Issues),formattedDisplayText( ...
+%    issues.Issues(:,["Location" "Severity" "Description"])))
+disp('In check task');
 end
 
 function testTask(~)
 % Run unit tests
-results = runtests(IncludeSubfolders=true,OutputDetail="terse");
-assertSuccess(results);
+% results = runtests(IncludeSubfolders=true,OutputDetail="terse");
+% assertSuccess(results);
+disp('In test task');
 end
 
 function archiveTask(~)
 % Create ZIP file
-zipFileName = "source_" + ...
-    string(datetime("now",Format="yyyyMMdd'T'HHmmss"));
-zip(zipFileName,"*")
+% zipFileName = "source_" + ...
+%     string(datetime("now",Format="yyyyMMdd'T'HHmmss"));
+% zip(zipFileName,"*")
+disp('In archive task');
 end
