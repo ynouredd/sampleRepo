@@ -21,7 +21,7 @@ function testTask(~)
 % Run unit tests
 % results = runtests(IncludeSubfolders=true,OutputDetail="terse");
 % assertSuccess(results);
-disp('In test task');
+disp('In test t
 end
 
 function archiveTask(~)
