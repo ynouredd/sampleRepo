@@ -24,9 +24,7 @@ jobs:
           test-results-simulink-test: test-results/results.mldatx
       
       - name: Run build
-        uses: matlab-actions/run-build@v2.4.0
-        with:
-          tasks: archive  
+        uses: matlab-actions/run-build@v2.4.0 
           
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
