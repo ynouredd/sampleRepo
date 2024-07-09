@@ -6,10 +6,11 @@ plan = buildplan(localfunctions);
 plan.DefaultTasks = "test";
 
 % Make the "archive" task dependent on the "check" and "test" tasks
-plan("archive").Dependencies = ["check" "test"];
+plan("archive1").Dependencies = ["check1" "test1"];
+plan("archive2").Dependencies = ["check2" "test2"];
 end
 
-function checkTask(~)
+function check1Task(~)
 % Identify code issues
 % issues = codeIssues;
 % assert(isempty(issues.Issues),formattedDisplayText( ...
@@ -17,14 +18,37 @@ function checkTask(~)
 disp('In check task');
 end
 
-function testTask(~)
+function test1Task(~)
 % Run unit tests
 % results = runtests(IncludeSubfolders=true,OutputDetail="terse");
 % assertSuccess(results);
 disp('In test task');
 end
 
-function archiveTask(~)
+function archive1Task(~)
+% Create ZIP file
+% zipFileName = "source_" + ...
+%     string(datetime("now",Format="yyyyMMdd'T'HHmmss"));
+% zip(zipFileName,"*")
+disp('In archive task');
+end
+
+function check2Task(~)
+% Identify code issues
+% issues = codeIssues;
+% assert(isempty(issues.Issues),formattedDisplayText( ...
+%    issues.Issues(:,["Location" "Severity" "Description"])))
+disp('In check task');
+end
+
+function test2Task(~)
+% Run unit tests
+% results = runtests(IncludeSubfolders=true,OutputDetail="terse");
+% assertSuccess(results);
+disp('In test task');
+end
+
+function archive2Task(~)
 % Create ZIP file
 % zipFileName = "source_" + ...
 %     string(datetime("now",Format="yyyyMMdd'T'HHmmss"));
