@@ -23,8 +23,9 @@ jobs:
       #     code-coverage-cobertura: code-coverage/coverage.xml
       #     test-results-pdf: test-results/results.pdf
       #     test-results-simulink-test: test-results/results.mldatx
-      # - name: Run build3
-      #   uses: matlab-actions/run-build@v2.4.0
+      
+      - name: Run build3
+        uses: matlab-actions/run-build@v2.4.0
         
       - name: Run build
         if: always()
