@@ -24,8 +24,8 @@ jobs:
       #     test-results-pdf: test-results/results.pdf
       #     test-results-simulink-test: test-results/results.mldatx
       
-      # - name: Run build3
-      #   uses: matlab-actions/run-build@v2.4.0
+      - name: Run build3
+        uses: matlab-actions/run-build@v2.4.0
         
       - name: Run build
         if: always()
@@ -33,11 +33,11 @@ jobs:
         with:
           tasks: archive1
 
-      # - name: Run build2
-      #   if: always()
-      #   uses: matlab-actions/run-build@v2.4.0 
-      #   with:
-      #     tasks: archive2
+      - name: Run build2
+        if: always()
+        uses: matlab-actions/run-build@v2.4.0 
+        with:
+          tasks: archive2
 
  
 
