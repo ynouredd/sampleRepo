@@ -10,6 +10,8 @@ jobs:
         uses: actions/checkout@v4
       - name: Set up MATLAB
         uses: matlab-actions/setup-matlab@v2
+        with:
+          cache: true
       - name: Run script
         uses: matlab-actions/run-command@v2
         with:
@@ -26,7 +28,7 @@ jobs:
       - name: Run build
         uses: matlab-actions/run-build@v2.4.0 
         with:
-          tasks: check
+          tasks: archive1
           
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
@@ -40,10 +42,14 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v2
+      - name: Set up MATLAB
+        uses: matlab-actions/setup-matlab@v2
+        with:
+          cahce: true
       - name: Run build
         uses: matlab-actions/run-build@v2.4.0 
         with:
-            tasks: test
+            tasks: archive2
       
    
 
