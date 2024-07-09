@@ -27,11 +27,13 @@ jobs:
       #   uses: matlab-actions/run-build@v2.4.0
         
       - name: Run build
+        if: always()
         uses: matlab-actions/run-build@v2.4.0 
         with:
           tasks: archive1
 
       - name: Run build2
+        if: always()
         uses: matlab-actions/run-build@v2.4.0 
         with:
           tasks: archive2
