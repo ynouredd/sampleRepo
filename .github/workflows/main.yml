@@ -10,8 +10,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Set up MATLAB
         uses: matlab-actions/setup-matlab@v2
-        with:
-          cache: true
+
       - name: Run script
         uses: matlab-actions/run-command@v2
         with:
@@ -24,8 +23,8 @@ jobs:
       #     code-coverage-cobertura: code-coverage/coverage.xml
       #     test-results-pdf: test-results/results.pdf
       #     test-results-simulink-test: test-results/results.mldatx
-      - name: Run build3
-        uses: matlab-actions/run-build@v2.4.0
+      # - name: Run build3
+      #   uses: matlab-actions/run-build@v2.4.0
         
       - name: Run build
         uses: matlab-actions/run-build@v2.4.0 
@@ -46,20 +45,18 @@ jobs:
       #     path: |
       #       test-results/
       #       code-coverage/
-  # build2job:
-  #   name: Run MATLAB build2
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Check out repository
-  #       uses: actions/checkout@v4
-  #     - name: Set up MATLAB
-  #       uses: matlab-actions/setup-matlab@v2
-  #       with:
-  #         cache: true
-  #     - name: Run build
-  #       uses: matlab-actions/run-build@v2.4.0 
-  #       with:
-  #           tasks: archive2
+  build2job:
+    name: Run MATLAB build2
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up MATLAB
+        uses: matlab-actions/setup-matlab@v2
+        with:
+      - name: Run build
+        uses: matlab-actions/run-build@v2.4.0 
+
       
    
 
