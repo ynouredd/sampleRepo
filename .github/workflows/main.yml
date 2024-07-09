@@ -11,17 +11,22 @@ jobs:
       - name: Set up MATLAB
         uses: matlab-actions/setup-matlab@v1
       - name: Run script
-        uses: matlab-actions/run-command@v1
+        uses: matlab-actions/run-command@v2
         with:
           command: version          
       - name: Run Tests
-        uses: matlab-actions/run-tests@v1
+        uses: matlab-actions/run-tests@v2
         with:
           source-folder: src
           test-results-junit: test-results/results.xml
           code-coverage-cobertura: code-coverage/coverage.xml
           test-results-pdf: test-results/results.pdf
           test-results-simulink-test: test-results/results.mldatx
+      
+      - name: Run build
+        uses: matlab-actions/run-build@v2.4.0
+        with:
+          tasks: archive  
           
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
