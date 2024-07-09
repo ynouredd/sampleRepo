@@ -22,7 +22,7 @@ function test1Task(~)
 % Run unit tests
 % results = runtests(IncludeSubfolders=true,OutputDetail="terse");
 % assertSuccess(results);
-disp('In test task');
+a=b;
 end
 
 function archive1Task(~)
