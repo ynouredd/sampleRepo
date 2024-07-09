@@ -25,6 +25,8 @@ jobs:
       
       - name: Run build
         uses: matlab-actions/run-build@v2.4.0 
+        with:
+          tasks: check
           
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
@@ -41,7 +43,7 @@ jobs:
       - name: Run build
         uses: matlab-actions/run-build@v2.4.0 
           with:
-            test
+            tasks: test
       
    
 
