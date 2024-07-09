@@ -22,7 +22,7 @@ function test1Task(~)
 % Run unit tests
 % results = runtests(IncludeSubfolders=true,OutputDetail="terse");
 % assertSuccess(results);
-a=b;
+disp('In test task');
 end
 
 function archive1Task(~)
@@ -56,10 +56,10 @@ function archive2Task(~)
 disp('In archive task');
 end
 
-function testTask(~)
+%function testTask(~)
 % Create ZIP file
 % zipFileName = "source_" + ...
 %     string(datetime("now",Format="yyyyMMdd'T'HHmmss"));
 % zip(zipFileName,"*")
-a=b;
-end
+%a=b;
+%end
