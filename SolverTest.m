@@ -1,5 +1,5 @@
 classdef SolverTest < matlab.unittest.TestCase
-    methods(Test)
+    methods(Test, TestTags = {'Unit'})
         function realSolution(testCase)
             actSolution = quadraticSolver(1,-3,2);
             expSolution = [2 1];
