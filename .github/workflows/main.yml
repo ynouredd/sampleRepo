@@ -1,5 +1,5 @@
 
-name: Run MATLAB Script on GitHub-Hosted Runner
+name: GHA summary table
 on: push
 jobs:
   my-job:
